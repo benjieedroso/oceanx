@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TripController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 /*
@@ -16,3 +17,5 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('Home');
 });
+
+Route::get('/trip', [TripController::class, 'show'])->name('trip');
